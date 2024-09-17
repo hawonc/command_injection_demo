@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping a Link</title>
+</head>
+<body>
+    <h1>Ping a Link</h1>
+    <form action="/echo" method="post">
+        <label for="link">Enter a word to hear it back:</label>
+        <input type="text" id="link" name="link" required>
+        <button type="submit">Echo</button>
+    </form>
+    {% if result %}
+    <h2>Result:</h2>
+    <pre>{{ result }}</pre>
+    {% endif %}
+</body>
+</html>
